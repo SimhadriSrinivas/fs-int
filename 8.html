@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object Demo</title>
+    <script>
+        function openNewWindow() {
+            window.open("https://www.google.com");
+        }
+        function showAlert() {
+            alert("This is an alert message!");
+        }
+        function showWindowSize() {
+            let width = window.innerWidth;
+            let height = window.innerHeight;
+            document.getElementById("size").innerHTML = "Window Width: " + width + "px, Height: " + height + "px";
+        }
+    </script>
+</head>
+<body>
+    <h1>JavaScript Window Object Demo</h1>
+    <button onclick="openNewWindow()">Open New Window</button>
+    <button onclick="showAlert()">Show Alert</button>
+    <button onclick="showWindowSize()">Get Window Size</button>
+    
+    <p id="size">Click the button to see window dimensions.</p>
+</body>
+</html>

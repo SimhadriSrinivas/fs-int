@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Object Demo</title>
+    <script>
+        class Person {
+            constructor(name, age, city) {
+                this.name = name;
+                this.age = age;
+                this.city = city;
+            }
+
+            get details() {
+                return `${this.name}, Age: ${this.age}, City: ${this.city}`;
+            }
+
+            set updateCity(newCity) {
+                this.city = newCity;
+            }
+
+            greet() {
+                return `Hello, my name is ${this.name} and I am ${this.age} years old from ${this.city}.`;
+            }
+        }
+
+        function displayPerson() {
+            let person = new Person("John Doe", 25, "New York");
+            document.getElementById("output").innerHTML = person.greet();
+        }
+
+        function updatePersonCity() {
+            let person = new Person("John Doe", 25, "New York");
+            person.updateCity = "Los Angeles";
+            document.getElementById("output").innerHTML = person.details;
+        }
+    </script>
+</head>
+<body>
+    <h1>JavaScript Object Demo</h1>
+    <button onclick="displayPerson()">Display Person</button>
+    <button onclick="updatePersonCity()">Update City</button>
+    <p id="output">Click the button to display person details.</p>
+</body>
+</html>
